@@ -1,4 +1,4 @@
-Extended DiSK Image definition
+<h1>Extended DiSK Image definition</h1>
 
 <p>The extended DSK image is a file designed to describe copy-protected floppy disk software.
 It's definition was defined by Marco Vieth, Ulrich Doewich and Kevin Thacker.
@@ -8,7 +8,8 @@ used (the other major format is the standard disk image with the "MV - CPC" iden
 or in place of a standard disk image if the resulting image is smaller than in the standard
 disk image form.
 
-</p><h2>Extended DiSK Format (Rev.5)</h2>
+</p>
+<h2>Extended DiSK Format (Rev.5)</h2>
 
 <p>The disc image has the following format:
 
