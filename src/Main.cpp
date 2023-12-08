@@ -105,20 +105,22 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	FILE* fp;
 
 	uint8_t sf7Data[SF7_DISKSIZE];
 
-	for (int i = 0; i < SF7_DISKSIZE; i++) sf7Data[i] = 0xFF;
+	for (int i = 0; i < SF7_DISKSIZE; i++) sf7Data[i] = 0x00;
 
+	FILE* fp;
 
-	if ((fp = fopen(srcFilename, "rb")) != 0)
+	fp = fopen(srcFilename, "rb");
+	if (fp)
 	{
-		fread(fp, 1, SF7_DISKSIZE, fp);
+		fread(sf7Data, 1, SF7_DISKSIZE, fp);
 		fclose(fp);
 	}
 
-	if ((fp = fopen(dstFilename, "wb")) != 0)
+	fp = fopen(dstFilename, "wb");
+	if (fp)
 	{
 		WriteDiskHeader(fp, (char*)"SiRioKD");
 
